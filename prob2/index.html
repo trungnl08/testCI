@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //test Case
+        let list = [{
+            name: 'Arsenal',
+            points: 99,
+            GD: 45
+        },
+        {
+            name: 'MU',
+            points: 80,
+            GD: 29
+        },
+        {
+            name: 'Chelsea',
+            points: 75,
+            GD: 39
+        },]
+
+        //sort Points
+        function sortP(a, b) {
+            let aPoint = a.points
+            let bPoint = b.points
+            return 1;
+
+        }
+        let sortList = new Array();
+        list.sort(sortP).forEach(function (list, index) {
+            sortList.push({ 'name': list.name, 'points': list.points, 'GD': list.GD, 'position': index + 1 })
+        })
+
+        //Output
+        console.log(sortList);
+
+    </script>
+</body>
+
+</html>

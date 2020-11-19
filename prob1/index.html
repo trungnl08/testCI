@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Test case
+        let arr1 = prompt('Nhập mảng 1, các phần tử cách nhau 1 dấu phẩy,chữ đặt trong ngoặc kép (ví dụ : 1,2,"a")').split(',');
+        let arr2= prompt('Nhập mảng 2, các phần tử cách nhau 1 dấu phẩy,chữ đặt trong ngoặc kép (ví dụ : 1,2,"a")').split(',');
+        //function find array different
+        function arrayDiff(arr1, arr2) {
+        let diff = {};
+
+       diff.arr1 = arr1.filter(function(value) {
+           if (arr2.indexOf(value) === -1) {
+               return value;
+           }
+       });
+
+       diff.arr2 = arr2.filter(function(value) {
+           if (arr1.indexOf(value) === -1) {
+               return value;
+           }
+       });
+
+       diff.concat = diff.arr1.concat(diff.arr2);
+
+       return diff;
+};
+
+//alert
+alert(arrayDiff(arr1, arr2).concat)
+        
+    </script>
+</body>
+</html>
